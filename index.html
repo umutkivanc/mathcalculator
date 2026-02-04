@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modern Hesap Makinesi</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main class="app">
+      <section class="calculator" aria-label="Hesap makinesi">
+        <header class="display">
+          <div class="display__history" id="history">Son işlem yok</div>
+          <div class="display__input" id="display">0</div>
+        </header>
+
+        <section class="keypad" role="group" aria-label="Hesaplama tuşları">
+          <button class="key key--ghost" data-action="clear">AC</button>
+          <button class="key key--ghost" data-action="sign">+/-</button>
+          <button class="key key--ghost" data-action="percent">%</button>
+          <button class="key key--accent" data-action="operator" data-value="/">÷</button>
+
+          <button class="key" data-action="number" data-value="7">7</button>
+          <button class="key" data-action="number" data-value="8">8</button>
+          <button class="key" data-action="number" data-value="9">9</button>
+          <button class="key key--accent" data-action="operator" data-value="*">×</button>
+
+          <button class="key" data-action="number" data-value="4">4</button>
+          <button class="key" data-action="number" data-value="5">5</button>
+          <button class="key" data-action="number" data-value="6">6</button>
+          <button class="key key--accent" data-action="operator" data-value="-">−</button>
+
+          <button class="key" data-action="number" data-value="1">1</button>
+          <button class="key" data-action="number" data-value="2">2</button>
+          <button class="key" data-action="number" data-value="3">3</button>
+          <button class="key key--accent" data-action="operator" data-value="+">+</button>
+
+          <button class="key" data-action="function" data-value="sqrt">√</button>
+          <button class="key" data-action="number" data-value="0">0</button>
+          <button class="key" data-action="decimal" data-value=".">.</button>
+          <button class="key key--primary" data-action="equals">=</button>
+
+          <button class="key key--ghost" data-action="backspace">⌫</button>
+          <button class="key key--ghost" data-action="function" data-value="square">x²</button>
+          <button class="key key--ghost" data-action="function" data-value="reciprocal">1/x</button>
+          <button class="key key--ghost" data-action="parenthesis" data-value="(">(</button>
+          <button class="key key--ghost" data-action="parenthesis" data-value=")">)</button>
+        </section>
+      </section>
+
+      <aside class="tips">
+        <h2>Hızlı İpuçları</h2>
+        <ul>
+          <li>Klavyeden rakam ve işlem tuşlarıyla giriş yapabilirsiniz.</li>
+          <li>Parantez kullanarak ileri seviye işlemler oluşturun.</li>
+          <li>Son işlem bilgisi üstte görünür.</li>
+          <li>√, x² ve 1/x fonksiyonları hızlı hesaplama sağlar.</li>
+        </ul>
+      </aside>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
